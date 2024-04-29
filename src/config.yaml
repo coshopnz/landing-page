@@ -11,7 +11,7 @@ metadata:
   title:
     default: Coshop
     template: '%s — Coshop'
-  description: "\U0001F680 Suitable for Startups, Small Business, Sass Websites, Professional Portfolios, Marketing Websites, Landing Pages & Blogs."
+  description: "\U0001F680 Hyperlocal Food Delivery for a better future."
   robots:
     index: true
     follow: true
@@ -37,30 +37,30 @@ apps:
     postsPerPage: 6
 
     post:
-      isEnabled: true
+      isEnabled: false
       permalink: '/%slug%' # Variables: %slug%, %year%, %month%, %day%, %hour%, %minute%, %second%, %category%
       robots:
         index: true
 
     list:
-      isEnabled: true
+      isEnabled: false
       pathname: 'blog' # Blog main path, you can change this to "articles" (/articles)
       robots:
         index: true
 
     category:
-      isEnabled: true
+      isEnabled: false
       pathname: 'category' # Category main path /category/some-category, you can change this to "group" (/group/some-category)
       robots:
         index: true
 
     tag:
-      isEnabled: true
+      isEnabled: false
       pathname: 'tag' # Tag main path /tag/some-tag, you can change this to "topics" (/topics/some-category)
       robots:
         index: false
 
-    isRelatedPostsEnabled: true
+    isRelatedPostsEnabled: false
     relatedPostsCount: 4
 
 analytics:
@@ -84,7 +84,7 @@ ui:
         bgPage: rgb(255 255 255)
         primary: rgb(0 124 220)
         secondary: rgb(30 58 138)
-        accent: rgb(109 40 217)
+        accent: rgb(85, 202, 81)
         info: rgb(119 182 234)
         success: rgb(54 211 153)
         warning: rgb(251 189 35)
@@ -100,7 +100,7 @@ ui:
         bgPage: rgb(3 6 32)
         primary: rgb(29 78 216)
         secondary: rgb(30 58 138)
-        accent: rgb(135 77 2267)
+        accent: rgb(38 146 267)
         info: rgb(58 191 248)
         success: rgb(54 211 153)
         warning: rgb(251 189 35)
