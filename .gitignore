@@ -4,6 +4,9 @@ dist/
 
 # dependencies
 node_modules/
+.yarn/
+.yarnrc.yml
+install-state.gz
 
 # logs
 npm-debug.log*
