@@ -191,7 +191,7 @@ const getAnalytics = () => {
   const _default = {
     vendors: {
       googleAnalytics: {
-        id: undefined,
+        id: "G-WY6006TGHP",
         partytown: true,
       },
     },

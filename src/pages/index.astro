@@ -1,20 +1,12 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-import { getPermalink, getBlogPermalink, getAsset } from '../utils/permalinks';
-
+import { getPermalink, } from '../utils/permalinks';
 import Hero from '~/components/widgets/Hero.astro';
-import Note from '~/components/widgets/Note.astro';
 import Features from '~/components/widgets/Features.astro';
-import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
-import Content from '~/components/widgets/Content.astro';
-import BlogLatestPosts from '~/components/widgets/BlogLatestPosts.astro';
-import FAQs from '~/components/widgets/FAQs.astro';
-import Stats from '~/components/widgets/Stats.astro';
-import CallToAction from '~/components/widgets/CallToAction.astro';
 
 const metadata = {
-  title: 'AstroWind — Free template for creating websites with Astro + Tailwind CSS',
+  title: 'CoShop — A Community-Led Food Platform',
   ignoreTitleTemplate: true,
 };
 ---
@@ -31,18 +23,17 @@ const metadata = {
         target: '_blank',
         icon: 'tabler:mail',
       },
-      { text: 'Learn more', href: '#features' },
     ]}
-    image={{ src: '~/assets/images/parihaka-3-cropped.jpg', alt: 'AstroWind Hero Image' }}
+    image={{ src: '~/assets/images/coshop_diagram.png', alt: 'Diagram showing the normal supply chain crossed out and new flows of food from Growers to Food Hubs and on to Customers' }}
   >
     <Fragment slot="title">
       CoShop -<span class="hidden xl:inline"></span>
-      <span class="text-accent dark:text-white highlight"> A Hyperlocal Food Distribution System</span>
+      <span class="text-accent dark:text-white highlight"> A Community-led Food System</span>
     </Fragment>
 
     <Fragment slot="subtitle">
       <span class="hidden sm:inline">
-        <span class="font-semibold">CoShop</span> is a pre-product startup building a technology platform to connect local growers to empowered communities .</span
+        <span class="font-semibold">Empowering communities to create sustainable, resilient and affordable food systems.</span> </span
       >
       <span class="block mb-1 sm:hidden font-bold text-blue-600">CoShop: Better Food Together.</span>
     </Fragment>
@@ -51,176 +42,93 @@ const metadata = {
   <!-- Features Widget *************** -->
 
   <Features
-    id="vision"
-    tagline="VISION"
-    title="Hyperlocal Community Buying"
-    subtitle="One of the most professional and comprehensive templates currently on the market. Most starred & forked Astro theme in 2022."
+    id="benefits"
+    title="BENEFITS"
+    subtitle=""
     items={[
       {
-        title: 'Astro + Tailwind CSS Integration',
+        title: 'Affordable',
         description:
-          'A seamless integration between two great frameworks that offer high productivity, performance and versatility.',
-        icon: 'tabler:topology-star-ring',
+          'Purchasing in bulk from growers leads to up 50% off retail pricing.',
+        icon: 'tabler:coin',
       },
       {
-        title: 'Ready-to-use Components',
+        title: 'Low Emissions',
         description:
-          'Widgets made with Tailwind CSS ready to be used in Marketing Websites, SaaS, Blogs, Personal Profiles, Small Business...',
-        icon: 'tabler:components',
+          'Buying directly from growers reduces GHG emissions created from food waste, transport, refrigeration and packaging.',
+        icon: 'tabler:cloud-heart',
       },
       {
-        title: 'Best Practices',
+        title: 'Resilient',
         description:
-          'Creating secure, efficient, and user-friendly websites that deliver exceptional experiences and lasting value.',
-        icon: 'tabler:list-check',
+          'Reconnecting communities to local growers builds resilient supply chains that are less affected by disruptions.',
+        icon: 'tabler:link-plus',
       },
       {
-        title: 'Excellent Page Speed',
+        title: 'Nutritional',
         description:
-          'Having a good page speed impacts organic search ranking, improves user experience (UI/UX) and increase conversion rates.',
-        icon: 'tabler:rocket',
+          'Better access to fresh fruit and vegetables leads to better community-wide health outcomes.',
+        icon: 'tabler:carrot',
       },
       {
-        title: 'Search Engine Optimization (SEO)',
+        title: 'Efficient',
         description:
-          "SEO lies in its ability to enhance a website's visibility, driving organic traffic and enabling it to reach a wider audience.",
-        icon: 'tabler:arrows-right-left',
+          "Removing intermediaries between producers and consumers allows for much better matching of supply and demand, leading to higher productivity and lower waste.",
+        icon: 'tabler:circles-relation',
       },
       {
-        title: 'Open to new ideas and contributions',
+        title: 'Accessible',
         description:
-          'Embracing a culture that is open to new ideas and contributions is integral fostering innovation, collaboration, and a dynamic user experience.',
-        icon: 'tabler:bulb',
+          'Food Hubs can increase accessibility to fresh food, particularly for remote and rural towns far from any supermarket.',
+        icon: 'tabler:map-2',
       },
     ]}
   />
 
-  <!-- Content Widget **************** -->
-
-  <Content
-    isReversed
-    tagline="Inside template"
-    title="AstroWind's Blueprint: Fun Meets Functionality!"
-    items={[
-      {
-        title: 'Built on top of Astro 4.0',
-        description:
-          'Benefiting from the performance and developer-friendly features of this modern static site generator.',
-      },
-      {
-        title: 'Styled using Tailwind CSS',
-        description:
-          'Facilitating rapid design and consistent styling with this highly popular utility-first CSS framework.',
-      },
-      {
-        title: 'Cross-browser compatibility',
-        description:
-          'Ensure your website looks and functions consistently across various web browsers, delivering a seamless experience to all users.',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1519389950473-47ba0277781c?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80',
-      alt: 'Colorful Image',
-    }}
-  >
-    <Fragment slot="content">
-      <h3 class="text-2xl font-bold tracking-tight dark:text-white sm:text-3xl mb-2">Building on modern foundations</h3>
-       Gain a competitive advantage by incorporating industry leading practices
-    </Fragment>
-
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-blue-50 dark:bg-transparent"></div>
-    </Fragment>
-  </Content>
-
-  <!-- Steps Widget ****************** -->
-
   <Steps
-    title="Feature Roadmap"
+    title="How it works"
     items={[
       {
-        title: 'Enable Online Ordering',
+        title: 'Customer Joins',
         description:
-          "Make it easy for local community food hubs to take online orders",
+          "Customers sign up to CoShop and join a local food hub.",
+        icon: 'tabler:user-plus',
+      },
+      {
+        title: 'Order Online',
+        description:
+          "Customers create orders and pay online.",
         icon: 'tabler:credit-card-pay',
       },
       {
         title: 'Order Aggregation',
         description:
-          "Pour your vision into it. Add images, text, and all that jazz to breathe life into your digital space. Remember, it's the content that tells your story, so make it captivating.",
-        icon: 'tabler:letter-case',
+          "CoShop aggregates individual orders into a bulk order sent to growers.",
+        icon: 'tabler:stack-3',
       },
       {
-        title: 'Step 3: <span class="font-medium">Customize styles</span>',
+        title: 'Bulk Order Fulfilment',
         description:
-          'Give it your personal touch. Tailor colors, fonts, and layouts until it feels just right. Your unique flair, amplified by AstroWind! Precision in design ensures a seamless user experience.',
-        icon: 'tabler:paint',
+          'Growers pack the bulk order and delivery is arranged by the local food hub or the grower themselves.',
+        icon: 'tabler:truck-delivery',
       },
       {
-        title: 'Ready!',
-        icon: 'tabler:check',
+        title: 'Food Hub',
+        description:
+          'Food Hub operators recieve the bulk order and repackage into individual orders.',
+        icon: 'tabler:building-community',
       },
       {
-        title: 'Ready2!',
-        icon: 'tabler:check',
+        title: 'Pickup',
+        description:
+          'Customers pickup their order from the Food Hub.',
+        icon: 'tabler:shopping-bag-check',
       },
     ]}
     image={{
       src: '~/assets/images/IMG_1138.jpeg',
-      alt: 'Steps image',
+      alt: 'Stacks of crates filled with fresh produce.',
     }}
-  />
-
-
-  <!-- HighlightedPosts Widget ******* -->
-
-  <BlogLatestPosts
-    title="Find out more content in our Blog"
-    information={`The blog is used to display AstroWind documentation.
-                        Each new article will be an important step that you will need to know to be an expert in creating a website using Astro + Tailwind CSS.
-                        Astro is a very interesting technology. Thanks.
-                `}
-  />
-
-  <!-- FAQs Widget ******************* -->
-
-  <FAQs
-    title="Frequently Asked Questions"
-    subtitle="Dive into the following questions to gain insights into the powerful features that AstroWind offers and how it can elevate your web development journey."
-    tagline="FAQs"
-    classes={{ container: 'max-w-6xl' }}
-    items={[
-      {
-        title: 'Why AstroWind?',
-        description:
-          "Michael Knight a young loner on a crusade to champion the cause of the innocent. The helpless. The powerless in a world of criminals who operate above the law. Here he comes Here comes Speed Racer. He's a demon on wheels.",
-      },
-      {
-        title: 'What do I need to start?',
-        description:
-          'Space, the final frontier. These are the voyages of the Starship Enterprise. Its five-year mission: to explore strange new worlds. Many say exploration is part of our destiny, but it’s actually our duty to future generations.',
-      },
-      {
-        title: 'How to install the Astro + Tailwind CSS template?',
-        description:
-          "Well, the way they make shows is, they make one show. That show's called a pilot. Then they show that show to the people who make shows, and on the strength of that one show they decide if they're going to make more shows.",
-      },
-      {
-        title: "What's something that you don't understand?",
-        description:
-          "A flower in my garden, a mystery in my panties. Heart attack never stopped old Big Bear. I didn't even know we were calling him Big Bear.",
-      },
-      {
-        title: 'What is something that you would like to try again?',
-        description:
-          "A business big enough that it could be listed on the NASDAQ goes belly up. Disappears! It ceases to exist without me. No, you clearly don't know who you're talking to, so let me clue you in.",
-      },
-      {
-        title: 'If you could only ask one question to each person you meet, what would that question be?',
-        description:
-          "This is not about revenge. This is about justice. A lot of things can change in twelve years, Admiral. Well, that's certainly good to know. About four years. I got tired of hearing how young I looked.",
-      },
-    ]}
   />
 
 </Layout>
